@@ -53,7 +53,7 @@ int main (int argc, char * argv[]) {
        	//2
    		MPI_Comm_rank (MPI_COMM_WORLD, &rank);
    		//3
-   		int  periods[2], dims[2], coords[2], reorder=1;
+   		int  periods[2], dims[2];
    		dims[0] = dims[1] = 0;
 		MPI_Dims_create (nprocs, 2, dims);
 		nprows = dims[0];
