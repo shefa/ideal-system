@@ -76,7 +76,7 @@ int main (int argc, char * argv[]) {
         if (mycolend >= colsize) mycolend = colsize - 1;
         myrowsize = myrowend - myrowstart + 1;
         mycolsize = mycolend - mycolstart + 1;
-        printf("rank = %d: (myrow,mycol) = (%d,%d), (left,right,up,down) = (%d,%d,%d,%d), row(start,end) = (%d,%d), col(start,end) = (%d,%d)\n",rank,myrow,mycol,left,right,up,down,myrowstart,myrowend,mycolstart,mycolend);
+        //printf("rank = %d: (myrow,mycol) = (%d,%d), (left,right,up,down) = (%d,%d,%d,%d), row(start,end) = (%d,%d), col(start,end) = (%d,%d)\n",rank,myrow,mycol,left,right,up,down,myrowstart,myrowend,mycolstart,mycolend);
 
 /* Allocate arrays */
         R = (int **)malloc((sizeof(int*)*(myrowsize+2)));
