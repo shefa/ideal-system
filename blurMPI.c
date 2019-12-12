@@ -47,7 +47,25 @@ int main (int argc, char * argv[]) {
  * 	int nprocs, rank, nprows, npcols, myrow, mycol, left, right, up, down
  *
  ***********************************************************************************************/
-
+        //https://discord.gg/ySMwyg
+       	//1 
+       	MPI_Comm_size (MPI_COMM_WORLD, &nprocs);
+       	//2
+   		MPI_Comm_rank (MPI_COMM_WORLD, &rank);
+   		//3
+   		int  periods[2], dims[2], coords[2], reorder=1;
+   		dims[0] = dims[1] = 0;
+		MPI_Dims_create (nprocs, 2, dims);
+		nprows = dims[0];
+		npcols = dims[1];
+		periods[0] = periods[1] = 0;
+		MPI_Cart_create (MPI_COMM_WORLD, 2, dims, periods, 1,&new_comm);
+		MPI_Cart_coords (new_comm, rank, 2, coords);
+		myrow = coords[0];
+		mycol = coords[1];
+   		//4
+   		MPI_Cart_shift  (new_comm, 0, -1, &up,  &down);
+   		MPI_Cart_shift  (new_comm, 1, -1, &right, &left);
 /* Do data decomposition */
         prowsize = ((rowsize-1)/nprows) + 1;
         myrowstart = myrow*prowsize;
@@ -82,13 +100,13 @@ int main (int argc, char * argv[]) {
 	
 /* Read input on process 0 and distribute to processes */
 	if (rank==0){
-                localrow = 1;
-                lastcolsize = colsize - pcolsize*(npcols-1);
-        	Rrow = (int *)malloc(sizeof(int)*(colsize));
-        	Grow = (int *)malloc(sizeof(int)*(colsize));
-        	Brow = (int *)malloc(sizeof(int)*(colsize));
+        localrow = 1;
+        lastcolsize = colsize - pcolsize*(npcols-1);
+        Rrow = (int *)malloc(sizeof(int)*(colsize));
+        Grow = (int *)malloc(sizeof(int)*(colsize));
+        Brow = (int *)malloc(sizeof(int)*(colsize));
 
-        	fp = fopen("David.ps", "r");
+        fp = fopen("David.ps", "r");
 		while(! feof(fp))
 		{
 			icheck = fscanf(fp, "\n%[^\n]", str);
@@ -105,10 +123,10 @@ int main (int argc, char * argv[]) {
 						col++;
 					}
 					if (col==colsize){
-                                                coords[0] = row/prowsize;
-                                                for(k=0;k<npcols;k++){
-                                                        nsend = (k<npcols-1 ? pcolsize : lastcolsize); 
-       							coffset = k*pcolsize;
+                        coords[0] = row/prowsize;
+                        for(k=0;k<npcols;k++){
+                            nsend = (k<npcols-1 ? pcolsize : lastcolsize); 
+       						coffset = k*pcolsize;
 							coords[1] = k;
   							MPI_Cart_rank(new_comm, coords, &dest);
 							if(dest!=0){
@@ -160,6 +178,46 @@ int main (int argc, char * argv[]) {
  * sendbuf and recvbuf arrays (allocated previously) may be used. 
  *
  ***********************************************************************************************/
+		//up
+		MPI_Sendrecv(&R[myrowsize][1],mycolsize,MPI_DOUBLE,up,tag,
+					 &R[0][1],mycolsize,MPI_DOUBLE,down,tag,new_comm,&status);
+		MPI_Sendrecv(&G[myrowsize][1],mycolsize,MPI_DOUBLE,up,tag,
+					 &G[0][1],mycolsize,MPI_DOUBLE,down,tag,new_comm,&status);
+		MPI_Sendrecv(&B[myrowsize][1],mycolsize,MPI_DOUBLE,up,tag,
+					 &B[0][1],mycolsize,MPI_DOUBLE,down,tag,new_comm,&status);
+		//down
+		MPI_Sendrecv(&R[1][1],mycolsize,MPI_DOUBLE,down,tag,
+					 &R[myrowsize+1][1],mycolsize,MPI_DOUBLE,up,tag,new_comm,&status);
+		MPI_Sendrecv(&G[1][1],mycolsize,MPI_DOUBLE,down,tag,
+					 &G[myrowsize+1][1],mycolsize,MPI_DOUBLE,up,tag,new_comm,&status);
+		MPI_Sendrecv(&B[1][1],mycolsize,MPI_DOUBLE,down,tag,
+					 &B[myrowsize+1][1],mycolsize,MPI_DOUBLE,up,tag,new_comm,&status);
+
+		//left
+		for(i=1;i<=myrowsize;i++) sendbuf[i-1] = R[i][1];
+		MPI_Sendrecv(sendbuf,myrowsize,MPI_DOUBLE,left,tag,recvbuf,myrowsize,MPI_DOUBLE,right,tag,new_comm,&status);
+		for(i=1;i<=myrowsize;i++) R[i][mycolsize+1] = recvbuf[i-1];
+
+		for(i=1;i<=myrowsize;i++) sendbuf[i-1] = G[i][1];
+		MPI_Sendrecv(sendbuf,myrowsize,MPI_DOUBLE,left,tag,recvbuf,myrowsize,MPI_DOUBLE,right,tag,new_comm,&status);
+		for(i=1;i<=myrowsize;i++) G[i][mycolsize+1] = recvbuf[i-1];
+
+		for(i=1;i<=myrowsize;i++) sendbuf[i-1] = B[i][1];
+		MPI_Sendrecv(sendbuf,myrowsize,MPI_DOUBLE,left,tag,recvbuf,myrowsize,MPI_DOUBLE,right,tag,new_comm,&status);
+		for(i=1;i<=myrowsize;i++) B[i][mycolsize+1] = recvbuf[i-1];
+
+		//right
+		for(i=1;i<=myrowsize;i++) sendbuf[i-1] = R[i][mycolsize];
+		MPI_Sendrecv (sendbuf,myrowsize,MPI_DOUBLE,right,tag,recvbuf,myrowsize,MPI_DOUBLE,left,tag,new_comm,&status);
+		for(i=1;i<=myrowsize;i++) R[i][0] = recvbuf[i-1];
+
+		for(i=1;i<=myrowsize;i++) sendbuf[i-1] = G[i][mycolsize];
+		MPI_Sendrecv (sendbuf,myrowsize,MPI_DOUBLE,right,tag,recvbuf,myrowsize,MPI_DOUBLE,left,tag,new_comm,&status);
+		for(i=1;i<=myrowsize;i++) G[i][0] = recvbuf[i-1];
+
+		for(i=1;i<=myrowsize;i++) sendbuf[i-1] = B[i][mycolsize];
+		MPI_Sendrecv (sendbuf,myrowsize,MPI_DOUBLE,right,tag,recvbuf,myrowsize,MPI_DOUBLE,left,tag,new_comm,&status);
+		for(i=1;i<=myrowsize;i++) B[i][0] = recvbuf[i-1];
 
 		for(localrow=1;localrow<=myrowsize;localrow++){
                         row = prowsize*myrow + localrow - 1;
