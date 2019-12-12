@@ -194,30 +194,30 @@ int main (int argc, char * argv[]) {
 					 &B[myrowsize+1][1],mycolsize,MPI_DOUBLE,up,tag,new_comm,&status);
 
 		//left
-		for(i=1;i<=myrowsize;i++) sendbuf[i-1] = R[i][1];
+		for(int i=1;i<=myrowsize;i++) sendbuf[i-1] = R[i][1];
 		MPI_Sendrecv(sendbuf,myrowsize,MPI_DOUBLE,left,tag,recvbuf,myrowsize,MPI_DOUBLE,right,tag,new_comm,&status);
-		for(i=1;i<=myrowsize;i++) R[i][mycolsize+1] = recvbuf[i-1];
+		for(int i=1;i<=myrowsize;i++) R[i][mycolsize+1] = recvbuf[i-1];
 
-		for(i=1;i<=myrowsize;i++) sendbuf[i-1] = G[i][1];
+		for(int i=1;i<=myrowsize;i++) sendbuf[i-1] = G[i][1];
 		MPI_Sendrecv(sendbuf,myrowsize,MPI_DOUBLE,left,tag,recvbuf,myrowsize,MPI_DOUBLE,right,tag,new_comm,&status);
-		for(i=1;i<=myrowsize;i++) G[i][mycolsize+1] = recvbuf[i-1];
+		for(int i=1;i<=myrowsize;i++) G[i][mycolsize+1] = recvbuf[i-1];
 
-		for(i=1;i<=myrowsize;i++) sendbuf[i-1] = B[i][1];
+		for(int i=1;i<=myrowsize;i++) sendbuf[i-1] = B[i][1];
 		MPI_Sendrecv(sendbuf,myrowsize,MPI_DOUBLE,left,tag,recvbuf,myrowsize,MPI_DOUBLE,right,tag,new_comm,&status);
-		for(i=1;i<=myrowsize;i++) B[i][mycolsize+1] = recvbuf[i-1];
+		for(int i=1;i<=myrowsize;i++) B[i][mycolsize+1] = recvbuf[i-1];
 
 		//right
-		for(i=1;i<=myrowsize;i++) sendbuf[i-1] = R[i][mycolsize];
+		for(int i=1;i<=myrowsize;i++) sendbuf[i-1] = R[i][mycolsize];
 		MPI_Sendrecv (sendbuf,myrowsize,MPI_DOUBLE,right,tag,recvbuf,myrowsize,MPI_DOUBLE,left,tag,new_comm,&status);
-		for(i=1;i<=myrowsize;i++) R[i][0] = recvbuf[i-1];
+		for(int i=1;i<=myrowsize;i++) R[i][0] = recvbuf[i-1];
 
-		for(i=1;i<=myrowsize;i++) sendbuf[i-1] = G[i][mycolsize];
+		for(int i=1;i<=myrowsize;i++) sendbuf[i-1] = G[i][mycolsize];
 		MPI_Sendrecv (sendbuf,myrowsize,MPI_DOUBLE,right,tag,recvbuf,myrowsize,MPI_DOUBLE,left,tag,new_comm,&status);
-		for(i=1;i<=myrowsize;i++) G[i][0] = recvbuf[i-1];
+		for(int i=1;i<=myrowsize;i++) G[i][0] = recvbuf[i-1];
 
-		for(i=1;i<=myrowsize;i++) sendbuf[i-1] = B[i][mycolsize];
+		for(int i=1;i<=myrowsize;i++) sendbuf[i-1] = B[i][mycolsize];
 		MPI_Sendrecv (sendbuf,myrowsize,MPI_DOUBLE,right,tag,recvbuf,myrowsize,MPI_DOUBLE,left,tag,new_comm,&status);
-		for(i=1;i<=myrowsize;i++) B[i][0] = recvbuf[i-1];
+		for(int i=1;i<=myrowsize;i++) B[i][0] = recvbuf[i-1];
 
 		for(localrow=1;localrow<=myrowsize;localrow++){
                         row = prowsize*myrow + localrow - 1;
@@ -291,7 +291,7 @@ int main (int argc, char * argv[]) {
 /* Gather data from processes and output on process 0 */
 	if(rank==0){
 		localrow = 1;
-		fout= fopen("DavidBlur.ps", "w");
+		fout= fopen("DavidBlurMPI.ps", "w");
 		for (k=0;k<nlines;k++) fprintf(fout,"\n%s", lines[k]);
 		fprintf(fout,"\n");
 		for(row=0;row<rowsize;row++){
