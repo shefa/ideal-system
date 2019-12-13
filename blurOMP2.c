@@ -51,6 +51,7 @@ int main (int argc, const char * argv[]) {
 	{
 		#pragma omp for
 		for(row=0;row<rowsize;row++){
+			#pragma omp simd
 			for (col=0;col<colsize;col++){
 				if (row != 0 && row != (rowsize-1) && col != 0 && col != (colsize-1)){
 					Rnew[row][col] = (R[row+1][col]+R[row-1][col]+R[row][col+1]+R[row][col-1])/4;
@@ -99,8 +100,9 @@ int main (int argc, const char * argv[]) {
 				}		
 			}
 		}
-		#pragma omp for simd
+		#pragma omp for
 		for(row=0;row<rowsize;row++){
+			#pragma omp simd
 			for (col=0;col<colsize;col++){
 			    R[row][col] = Rnew[row][col];
 			    G[row][col] = Gnew[row][col];
@@ -130,3 +132,4 @@ int main (int argc, const char * argv[]) {
 	fclose(fout);
     return 0;
 }
+
