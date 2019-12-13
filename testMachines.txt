@@ -1,0 +1,110 @@
+1
+Rank 0 on labx02: 0.044578 seconds elapsed
+Rank 0 on labx02: 0.046269 seconds elapsed
+Rank 0 on labx02: 0.044534 seconds elapsed
+Rank 0 on labx02: 0.044566 seconds elapsed
+Rank 0 on labx02: 0.044907 seconds elapsed
+Rank 0 on labx02: 0.045321 seconds elapsed
+Rank 0 on labx02: 0.044810 seconds elapsed
+Rank 0 on labx02: 0.046086 seconds elapsed
+Rank 0 on labx02: 0.045819 seconds elapsed
+Rank 0 on labx02: 0.044445 seconds elapsed
+3
+Rank 0 on labx02: 0.015132 seconds elapsed
+Rank 0 on labx02: 0.015561 seconds elapsed
+Rank 0 on labx02: 0.015077 seconds elapsed
+Rank 0 on labx02: 0.015328 seconds elapsed
+Rank 0 on labx02: 0.015532 seconds elapsed
+Rank 0 on labx02: 0.015493 seconds elapsed
+Rank 0 on labx02: 0.015721 seconds elapsed
+Rank 0 on labx02: 0.016108 seconds elapsed
+Rank 0 on labx02: 0.015072 seconds elapsed
+Rank 0 on labx02: 0.015208 seconds elapsed
+5
+Rank 0 on labx02: 0.013463 seconds elapsed
+Rank 0 on labx02: 0.022066 seconds elapsed
+Rank 0 on labx02: 0.013672 seconds elapsed
+Rank 0 on labx02: 0.013590 seconds elapsed
+Rank 0 on labx02: 0.013513 seconds elapsed
+Rank 0 on labx02: 0.013581 seconds elapsed
+Rank 0 on labx02: 0.013562 seconds elapsed
+Rank 0 on labx02: 0.013609 seconds elapsed
+Rank 0 on labx02: 0.013412 seconds elapsed
+Rank 0 on labx02: 0.013430 seconds elapsed
+7
+Rank 0 on labx02: 0.011359 seconds elapsed
+Rank 0 on labx02: 0.011407 seconds elapsed
+Rank 0 on labx02: 0.011428 seconds elapsed
+Rank 0 on labx02: 0.011369 seconds elapsed
+Rank 0 on labx02: 0.011203 seconds elapsed
+Rank 0 on labx02: 0.011300 seconds elapsed
+Rank 0 on labx02: 0.011264 seconds elapsed
+Rank 0 on labx02: 0.011534 seconds elapsed
+Rank 0 on labx02: 0.011371 seconds elapsed
+Rank 0 on labx02: 0.011286 seconds elapsed
+9
+Rank 0 on labx02: 0.011929 seconds elapsed
+Rank 0 on labx02: 0.011825 seconds elapsed
+Rank 0 on labx02: 0.016860 seconds elapsed
+Rank 0 on labx02: 0.012299 seconds elapsed
+Rank 0 on labx02: 0.012091 seconds elapsed
+Rank 0 on labx02: 0.012944 seconds elapsed
+Rank 0 on labx02: 0.015733 seconds elapsed
+Rank 0 on labx02: 0.016294 seconds elapsed
+Rank 0 on labx02: 0.012348 seconds elapsed
+Rank 0 on labx02: 0.016617 seconds elapsed
+11
+Rank 0 on labx02: 0.010488 seconds elapsed
+Rank 0 on labx02: 0.011233 seconds elapsed
+Rank 0 on labx02: 0.011283 seconds elapsed
+Rank 0 on labx02: 0.010920 seconds elapsed
+Rank 0 on labx02: 0.013664 seconds elapsed
+Rank 0 on labx02: 0.011157 seconds elapsed
+Rank 0 on labx02: 0.010297 seconds elapsed
+Rank 0 on labx02: 0.010064 seconds elapsed
+Rank 0 on labx02: 0.011639 seconds elapsed
+Rank 0 on labx02: 0.010560 seconds elapsed
+13
+Rank 0 on labx02: 0.031061 seconds elapsed
+Rank 0 on labx02: 0.031587 seconds elapsed
+Rank 0 on labx02: 0.031962 seconds elapsed
+Rank 0 on labx02: 0.031270 seconds elapsed
+Rank 0 on labx02: 0.030885 seconds elapsed
+Rank 0 on labx02: 0.032644 seconds elapsed
+Rank 0 on labx02: 0.030144 seconds elapsed
+Rank 0 on labx02: 0.032220 seconds elapsed
+Rank 0 on labx02: 0.031688 seconds elapsed
+Rank 0 on labx02: 0.030502 seconds elapsed
+17
+Rank 0 on labx02: 0.049527 seconds elapsed
+Rank 0 on labx02: 0.036171 seconds elapsed
+Rank 0 on labx02: 0.036908 seconds elapsed
+Rank 0 on labx02: 0.034142 seconds elapsed
+Rank 0 on labx02: 0.040280 seconds elapsed
+Rank 0 on labx02: 0.036006 seconds elapsed
+Rank 0 on labx02: 0.036455 seconds elapsed
+Rank 0 on labx02: 0.034073 seconds elapsed
+Rank 0 on labx02: 0.035775 seconds elapsed
+Rank 0 on labx02: 0.035709 seconds elapsed
+19
+Rank 0 on labx02: 0.037082 seconds elapsed
+Rank 0 on labx02: 0.042927 seconds elapsed
+Rank 0 on labx02: 0.035853 seconds elapsed
+Rank 0 on labx02: 0.036211 seconds elapsed
+Rank 0 on labx02: 0.036148 seconds elapsed
+Rank 0 on labx02: 0.056925 seconds elapsed
+Rank 0 on labx02: 0.036550 seconds elapsed
+Rank 0 on labx02: 0.030867 seconds elapsed
+Rank 0 on labx02: 0.031102 seconds elapsed
+Rank 0 on labx02: 0.032072 seconds elapsed
+2
+Rank 0 on labx02: 0.023111 seconds elapsed
+Rank 0 on labx02: 0.022526 seconds elapsed
+Rank 0 on labx02: 0.023059 seconds elapsed
+Rank 0 on labx02: 0.023193 seconds elapsed
+Rank 0 on labx02: 0.023131 seconds elapsed
+Rank 0 on labx02: 0.022693 seconds elapsed
+Rank 0 on labx02: 0.022682 seconds elapsed
+Rank 0 on labx02: 0.022844 seconds elapsed
+Rank 0 on labx02: 0.023129 seconds elapsed
+Rank 0 on labx02: 0.040378 seconds elapsed

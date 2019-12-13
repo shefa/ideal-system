@@ -63,8 +63,8 @@ int main (int argc, char * argv[]) {
         myrow = coords[0];
         mycol = coords[1];
         //4
-        MPI_Cart_shift  (new_comm, 0, 1, &up,  &down);
-        MPI_Cart_shift  (new_comm, 1, 1, &right, &left);
+        MPI_Cart_shift  (new_comm, 0, -1, &up,  &down);
+        MPI_Cart_shift  (new_comm, 1, -1, &right, &left);
 /* Do data decomposition */
         prowsize = ((rowsize-1)/nprows) + 1;
         myrowstart = myrow*prowsize;
