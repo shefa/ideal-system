@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<JUCERPROJECT id="wVeDE0" name="MMCW" projectType="audioplug" jucerVersion="5.4.5"
+              pluginChannelConfigs="{2,2}" pluginCharacteristicsValue="pluginIsSynth,pluginWantsMidiIn"
+              pluginFormats="buildStandalone,buildVST3">
+  <MAINGROUP id="miNQmJ" name="MMCW">
+    <GROUP id="{1937287F-4521-2E35-8FF4-FA5DBC6F97B1}" name="Dist">
+      <FILE id="ypclHE" name="PluginEditor.cpp" compile="0" resource="0"
+            file="Source/Dist/PluginEditor.cpp"/>
+      <FILE id="zN3BO1" name="PluginEditor.h" compile="0" resource="0" file="Source/Dist/PluginEditor.h"/>
+      <FILE id="srQR7d" name="PluginParameter.h" compile="0" resource="0"
+            file="Source/Dist/PluginParameter.h"/>
+      <FILE id="PNfXaA" name="PluginProcessor.cpp" compile="0" resource="0"
+            file="Source/Dist/PluginProcessor.cpp"/>
+      <FILE id="R5RYdP" name="PluginProcessor.h" compile="0" resource="0"
+            file="Source/Dist/PluginProcessor.h"/>
+    </GROUP>
+    <GROUP id="{11039C79-BFCC-1F26-CE6D-0FAE9BCD7804}" name="Conv">
+      <FILE id="Oh7lOI" name="ConvolutionDemo.h" compile="0" resource="0"
+            file="Source/Conv/ConvolutionDemo.h"/>
+      <FILE id="C3tm2Y" name="DemoUtilities.h" compile="0" resource="0" file="Source/Conv/DemoUtilities.h"/>
+      <FILE id="PBoVUe" name="DSPDemos_Common.h" compile="0" resource="0"
+            file="Source/Conv/DSPDemos_Common.h"/>
+      <FILE id="z0ir3y" name="Main.cpp" compile="0" resource="0" file="Source/Conv/Main.cpp"/>
+    </GROUP>
+    <GROUP id="{5E196E46-0BA7-1FA9-1604-FFABD4D128BC}" name="FFT">
+      <FILE id="ySYx3v" name="AudioFFT.cpp" compile="1" resource="0" file="Source/FFT/AudioFFT.cpp"/>
+      <FILE id="lRlDkz" name="AudioFFT.h" compile="0" resource="0" file="Source/FFT/AudioFFT.h"/>
+      <FILE id="sb7Hho" name="FFTConvolver.cpp" compile="1" resource="0"
+            file="Source/FFT/FFTConvolver.cpp"/>
+      <FILE id="RTu1qs" name="FFTConvolver.h" compile="0" resource="0" file="Source/FFT/FFTConvolver.h"/>
+      <FILE id="ztgLro" name="PluginParameter.h" compile="0" resource="0"
+            file="Source/FFT/PluginParameter.h"/>
+      <FILE id="Qn0q4m" name="TwoStageFFTConvolver.cpp" compile="1" resource="0"
+            file="Source/FFT/TwoStageFFTConvolver.cpp"/>
+      <FILE id="e6PZha" name="TwoStageFFTConvolver.h" compile="0" resource="0"
+            file="Source/FFT/TwoStageFFTConvolver.h"/>
+      <FILE id="R3hXod" name="Utilities.cpp" compile="1" resource="0" file="Source/FFT/Utilities.cpp"/>
+      <FILE id="fFw9sj" name="Utilities.h" compile="0" resource="0" file="Source/FFT/Utilities.h"/>
+    </GROUP>
+    <GROUP id="{2755932C-0A65-B49D-7178-2FF232594B83}" name="Granular">
+      <FILE id="omyaI3" name="DelayUnit.h" compile="0" resource="0" file="Source/Granular/DelayUnit.h"/>
+      <FILE id="Wb1GgK" name="EnvelopeGenerator.h" compile="0" resource="0"
+            file="Source/Granular/EnvelopeGenerator.h"/>
+      <FILE id="wCWjWD" name="Grain.h" compile="0" resource="0" file="Source/Granular/Grain.h"/>
+      <FILE id="Ef5aJF" name="GrainChannelComponent.h" compile="0" resource="0"
+            file="Source/Granular/GrainChannelComponent.h"/>
+      <FILE id="F6ktDz" name="GrainContentProcessor.cpp" compile="1" resource="0"
+            file="Source/Granular/GrainContentProcessor.cpp"/>
+      <FILE id="EZb6k0" name="GrainContentProcessor.h" compile="0" resource="0"
+            file="Source/Granular/GrainContentProcessor.h"/>
+      <FILE id="qwWSjo" name="GrainTable.h" compile="0" resource="0" file="Source/Granular/GrainTable.h"/>
+      <FILE id="GuT759" name="Phasor.h" compile="0" resource="0" file="Source/Granular/Phasor.h"/>
+      <FILE id="acuRlC" name="PitchShifter.h" compile="0" resource="0" file="Source/Granular/PitchShifter.h"/>
+    </GROUP>
+    <GROUP id="{0235BAE5-D653-2D12-4E34-C3BEAC37F8B6}" name="Source">
+      <FILE id="YuU8tV" name="STFT.h" compile="0" resource="0" file="Source/STFT.h"/>
+      <FILE id="O4kthJ" name="SpectrogramContentComponent.h" compile="0"
+            resource="0" file="Source/SpectrogramContentComponent.h"/>
+      <FILE id="SN4g5d" name="GrainContentComponent.h" compile="0" resource="0"
+            file="Source/GrainContentComponent.h"/>
+      <FILE id="bxoXlB" name="GrainContentComponent.cpp" compile="1" resource="0"
+            file="Source/GrainContentComponent.cpp"/>
+      <FILE id="Z1sfbj" name="PluginProcessor.cpp" compile="1" resource="0"
+            file="Source/PluginProcessor.cpp"/>
+      <FILE id="x7OK0d" name="PluginProcessor.h" compile="0" resource="0"
+            file="Source/PluginProcessor.h"/>
+      <FILE id="BUYMQ3" name="PluginEditor.cpp" compile="1" resource="0"
+            file="Source/PluginEditor.cpp"/>
+      <FILE id="Pi0Uz3" name="PluginEditor.h" compile="0" resource="0" file="Source/PluginEditor.h"/>
+    </GROUP>
+  </MAINGROUP>
+  <EXPORTFORMATS>
+    <VS2017 targetFolder="Builds/VisualStudio2017">
+      <CONFIGURATIONS>
+        <CONFIGURATION isDebug="1" name="Debug"/>
+        <CONFIGURATION isDebug="0" name="Release"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_audio_basics" path="../../modules"/>
+        <MODULEPATH id="juce_audio_devices" path="../../modules"/>
+        <MODULEPATH id="juce_audio_formats" path="../../modules"/>
+        <MODULEPATH id="juce_audio_plugin_client" path="../../modules"/>
+        <MODULEPATH id="juce_audio_processors" path="../../modules"/>
+        <MODULEPATH id="juce_audio_utils" path="../../modules"/>
+        <MODULEPATH id="juce_core" path="../../modules"/>
+        <MODULEPATH id="juce_cryptography" path="../../modules"/>
+        <MODULEPATH id="juce_data_structures" path="../../modules"/>
+        <MODULEPATH id="juce_events" path="../../modules"/>
+        <MODULEPATH id="juce_graphics" path="../../modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../../modules"/>
+        <MODULEPATH id="juce_gui_extra" path="../../modules"/>
+        <MODULEPATH id="juce_opengl" path="../../modules"/>
+        <MODULEPATH id="juce_dsp" path="../../modules"/>
+      </MODULEPATHS>
+    </VS2017>
+    <LINUX_MAKE targetFolder="Builds/LinuxMakefile">
+      <CONFIGURATIONS>
+        <CONFIGURATION isDebug="1" name="Debug"/>
+        <CONFIGURATION isDebug="0" name="Release"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_opengl" path="../../juce"/>
+        <MODULEPATH id="juce_gui_extra" path="../../juce"/>
+        <MODULEPATH id="juce_gui_basics" path="../../juce"/>
+        <MODULEPATH id="juce_graphics" path="../../juce"/>
+        <MODULEPATH id="juce_events" path="../../juce"/>
+        <MODULEPATH id="juce_dsp" path="../../juce"/>
+        <MODULEPATH id="juce_data_structures" path="../../juce"/>
+        <MODULEPATH id="juce_cryptography" path="../../juce"/>
+        <MODULEPATH id="juce_core" path="../../juce"/>
+        <MODULEPATH id="juce_audio_utils" path="../../juce"/>
+        <MODULEPATH id="juce_audio_processors" path="../../juce"/>
+        <MODULEPATH id="juce_audio_plugin_client" path="../../juce"/>
+        <MODULEPATH id="juce_audio_formats" path="../../juce"/>
+        <MODULEPATH id="juce_audio_devices" path="../../juce"/>
+        <MODULEPATH id="juce_audio_basics" path="../../juce"/>
+      </MODULEPATHS>
+    </LINUX_MAKE>
+    <VS2019 targetFolder="Builds/VisualStudio2019">
+      <CONFIGURATIONS>
+        <CONFIGURATION isDebug="1" name="Debug"/>
+        <CONFIGURATION isDebug="0" name="Release"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_opengl"/>
+        <MODULEPATH id="juce_gui_extra"/>
+        <MODULEPATH id="juce_gui_basics"/>
+        <MODULEPATH id="juce_graphics"/>
+        <MODULEPATH id="juce_events"/>
+        <MODULEPATH id="juce_dsp"/>
+        <MODULEPATH id="juce_data_structures"/>
+        <MODULEPATH id="juce_cryptography"/>
+        <MODULEPATH id="juce_core"/>
+        <MODULEPATH id="juce_audio_utils"/>
+        <MODULEPATH id="juce_audio_processors"/>
+        <MODULEPATH id="juce_audio_plugin_client"/>
+        <MODULEPATH id="juce_audio_formats"/>
+        <MODULEPATH id="juce_audio_devices"/>
+        <MODULEPATH id="juce_audio_basics"/>
+      </MODULEPATHS>
+    </VS2019>
+  </EXPORTFORMATS>
+  <MODULES>
+    <MODULE id="juce_audio_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_devices" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_formats" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_plugin_client" showAllCode="1" useLocalCopy="0"
+            useGlobalPath="1"/>
+    <MODULE id="juce_audio_processors" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_utils" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_core" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_cryptography" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_data_structures" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_dsp" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_events" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_graphics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_extra" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_opengl" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+  </MODULES>
+  <LIVE_SETTINGS>
+    <WINDOWS/>
+    <LINUX/>
+  </LIVE_SETTINGS>
+  <JUCEOPTIONS JUCE_VST3_CAN_REPLACE_VST2="0" JUCE_STRICT_REFCOUNTEDPOINTER="1"/>
+</JUCERPROJECT>
