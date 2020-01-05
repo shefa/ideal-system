@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<JUCERPROJECT id="EVrqgz" name="HourglassGranular" projectType="audioplug"
+              version="1.0.0" bundleIdentifier="com.point3dsp.HourglassGranular"
+              includeBinaryInAppConfig="1" buildVST="1" buildVST3="0" buildAU="0"
+              buildAUv3="0" buildRTAS="0" buildAAX="0" buildStandalone="1"
+              enableIAA="0" pluginName="HourglassGranular" pluginDesc="HourglassGranular"
+              pluginManufacturer="Point3dsp" pluginManufacturerCode="Manu"
+              pluginCode="Evrq" pluginIsSynth="0" pluginWantsMidiIn="0" pluginProducesMidiOut="0"
+              pluginIsMidiEffectPlugin="0" pluginEditorRequiresKeys="0" pluginAUExportPrefix="HourglassGranularAU"
+              pluginRTASCategory="" aaxIdentifier="com.point3dsp.HourglassGranular"
+              pluginAAXCategory="2" jucerVersion="5.4.5" pluginFormats="buildStandalone,buildVST"
+              pluginRTASDisableBypass="0" pluginRTASDisableMultiMono="0" pluginAAXDisableBypass="0"
+              pluginAAXDisableMultiMono="0" pluginChannelConfigs="{2,2}">
+  <MAINGROUP id="YfQrpo" name="HourglassGranular">
+    <GROUP id="{773F1AFC-5E5D-8FDE-533E-5A8BFAA76DD6}" name="Source">
+      <GROUP id="{1C084A78-D32E-940B-8E10-C491DBDD9FAD}" name="FFT">
+        <FILE id="fQxUxq" name="AudioFFT.cpp" compile="1" resource="0" file="Source/FFT/AudioFFT.cpp"/>
+        <FILE id="wUNrEf" name="AudioFFT.h" compile="0" resource="0" file="Source/FFT/AudioFFT.h"/>
+        <FILE id="YQMjGr" name="FFTConvolver.cpp" compile="1" resource="0"
+              file="Source/FFT/FFTConvolver.cpp"/>
+        <FILE id="o8lZkX" name="FFTConvolver.h" compile="0" resource="0" file="Source/FFT/FFTConvolver.h"/>
+        <FILE id="Wg9Pyc" name="TwoStageFFTConvolver.cpp" compile="1" resource="0"
+              file="Source/FFT/TwoStageFFTConvolver.cpp"/>
+        <FILE id="Exjvwg" name="TwoStageFFTConvolver.h" compile="0" resource="0"
+              file="Source/FFT/TwoStageFFTConvolver.h"/>
+        <FILE id="QrM0lM" name="Utilities.cpp" compile="1" resource="0" file="Source/FFT/Utilities.cpp"/>
+        <FILE id="x4A0Xs" name="Utilities.h" compile="0" resource="0" file="Source/FFT/Utilities.h"/>
+      </GROUP>
+      <GROUP id="{9EB83F55-9703-7AFA-2D2B-E0DB56F4459D}" name="Audio">
+        <FILE id="MXftMC" name="DelayUnit.h" compile="0" resource="0" file="Source/DelayUnit.h"/>
+        <FILE id="UPED3p" name="EnvelopeGenerator.h" compile="0" resource="0"
+              file="Source/EnvelopeGenerator.h"/>
+        <FILE id="l4EUnS" name="Grain.h" compile="0" resource="0" file="Source/Grain.h"/>
+        <FILE id="T5mEUa" name="GrainTable.h" compile="0" resource="0" file="Source/GrainTable.h"/>
+        <FILE id="BotaZs" name="JuicyClouds.cpp" compile="1" resource="0" file="Source/JuicyClouds.cpp"/>
+        <FILE id="r7y6Qi" name="JuicyClouds.h" compile="0" resource="0" file="Source/JuicyClouds.h"/>
+        <FILE id="LA2GzW" name="Phasor.h" compile="0" resource="0" file="Source/Phasor.h"/>
+        <FILE id="Xxj4ZE" name="PitchShifter.h" compile="0" resource="0" file="Source/PitchShifter.h"/>
+        <FILE id="FkqC0F" name="PluginProcessor.cpp" compile="1" resource="0"
+              file="Source/PluginProcessor.cpp"/>
+        <FILE id="sXQ7bG" name="PluginProcessor.h" compile="0" resource="0"
+              file="Source/PluginProcessor.h"/>
+      </GROUP>
+      <GROUP id="{1C94860E-B338-761C-7E9F-6A76BF66A7B3}" name="UI">
+        <FILE id="OYo3GE" name="PluginEditor.cpp" compile="1" resource="0"
+              file="Source/PluginEditor.cpp"/>
+        <FILE id="dhxoor" name="PluginEditor.h" compile="0" resource="0" file="Source/PluginEditor.h"/>
+        <FILE id="VGdqBh" name="GrainChannelComponent.h" compile="0" resource="0"
+              file="Source/GrainChannelComponent.h"/>
+      </GROUP>
+    </GROUP>
+  </MAINGROUP>
+  <EXPORTFORMATS>
+    <LINUX_MAKE targetFolder="Builds/LinuxMakefile">
+      <CONFIGURATIONS>
+        <CONFIGURATION isDebug="1" name="Debug"/>
+        <CONFIGURATION isDebug="0" name="Release"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_video" path="../../juce"/>
+        <MODULEPATH id="juce_opengl" path="../../juce"/>
+        <MODULEPATH id="juce_gui_extra" path="../../juce"/>
+        <MODULEPATH id="juce_gui_basics" path="../../juce"/>
+        <MODULEPATH id="juce_graphics" path="../../juce"/>
+        <MODULEPATH id="juce_events" path="../../juce"/>
+        <MODULEPATH id="juce_data_structures" path="../../juce"/>
+        <MODULEPATH id="juce_cryptography" path="../../juce"/>
+        <MODULEPATH id="juce_core" path="../../juce"/>
+        <MODULEPATH id="juce_audio_utils" path="../../juce"/>
+        <MODULEPATH id="juce_audio_processors" path="../../juce"/>
+        <MODULEPATH id="juce_audio_plugin_client" path="../../juce"/>
+        <MODULEPATH id="juce_audio_formats" path="../../juce"/>
+        <MODULEPATH id="juce_audio_devices" path="../../juce"/>
+        <MODULEPATH id="juce_audio_basics" path="../../juce"/>
+      </MODULEPATHS>
+    </LINUX_MAKE>
+  </EXPORTFORMATS>
+  <MODULES>
+    <MODULE id="juce_audio_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_devices" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_formats" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_plugin_client" showAllCode="1" useLocalCopy="0"
+            useGlobalPath="1"/>
+    <MODULE id="juce_audio_processors" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_utils" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_core" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_cryptography" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_data_structures" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_events" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_graphics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_extra" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_opengl" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_video" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+  </MODULES>
+  <JUCEOPTIONS JUCE_QUICKTIME="disabled"/>
+  <LIVE_SETTINGS>
+    <LINUX/>
+  </LIVE_SETTINGS>
+</JUCERPROJECT>
